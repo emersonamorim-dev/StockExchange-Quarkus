@@ -1,0 +1,27 @@
+version: '3.7'
+
+services:
+  db:
+    image: mysql:8.0
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: quarkusDB
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+    volumes:
+      - ./data:/var/lib/mysql
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      QUARKUS_DATASOURCE_URL: jdbc:mysql://db:3306/quarkusDB
+      QUARKUS_DATASOURCE_USERNAME: test
+      QUARKUS_DATASOURCE_PASSWORD: test
+    ports:
+      - 8080:8080
+    depends_on:
+      - db
