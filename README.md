@@ -1,5 +1,5 @@
 # Stock Exchange Quarkus - Mulesoft
-Codificação em Java usando framework Quarkuse de aplicação de bolsa de valores desenvolvido com banco de dados MySQL e aplicação está usando Docker para usar conteiner na aplicação.
+Codificação em Java usando framework Quarkus de aplicação de bolsa de valores desenvolvido com banco de dados MySQL e aplicação está usando Docker para usar conteiner na aplicação.
 Integração com Mulesoft e testes em Cucumber para implementação de BDD e TDD para teste de software.
 
 ## Estrutura do Projeto
